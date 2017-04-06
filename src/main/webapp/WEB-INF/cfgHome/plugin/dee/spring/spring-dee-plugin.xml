@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean name="dee_Initializer" class="com.seeyon.apps.dee.DEEPluginDefintion">
+	</bean>
+	<bean class="com.seeyon.apps.dee.DEEInitializer"></bean>
+</beans>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-autowire="byName" >
+	<bean id="deeSection" class="com.seeyon.apps.dee.section.DeeSection" init-method="init">
+		<property name="orgManager" ref="orgManager" />
+		<property name="sectionType" value="forum" />
+		<property name="sortId" value="111" />
+		<property name="resourceBundle" value="com.seeyon.apps.dee.resources.i18n.DeeResources"/>
+		<property name="properties">
+			<list>
+				<bean class="com.seeyon.ctp.portal.section.SectionPropertyImpl">
+					<property name="reference">
+						<list>
+							<bean class="com.seeyon.ctp.portal.section.SectionReferenceImpl">
+								<property name="name" value="columnsName" />
+								<property name="readOnly" value="true" />
+								<property name="subject" value="cannel.name.label" />
+								<property name="valueType" value="2" />
+							</bean>
+							<bean class="com.seeyon.ctp.portal.section.SectionReferenceImpl">
+								<property name="name" value="count" />
+								<property name="subject" value="cannel.data.count" />
+								<property name="valueType" value="2" />
+								<property name="validate" value="isInteger" />
+								<property name="validateValue" value="max=50 min=7" />
+								<property name="defaultValue" value="7" />
+							</bean>
+							<bean class="com.seeyon.ctp.portal.section.SectionReferenceImpl">
+								<property name="name" value="rowList" />
+								<property name="subject" value="cannel.display.column.label" />
+								<property name="valueType" value="5" />
+								<property name="defaultValue" value="all" />
+								<property name="valueRanges">
+									<list>
+										<bean class="com.seeyon.ctp.portal.section.SectionReferenceValueRangeImpl">
+											<property name="subject" value="dee.panel.all.label" />
+											<property name="value" value="all" />
+										</bean>
+										<bean class="com.seeyon.ctp.portal.section.SectionReferenceValueRangeImpl">
+											<property name="subject" value="dee.panel.custom.label" />
+											<property name="value" value="showField" />
+											<property name="panelSetUrl" value="/deeSectionController.do?method=showField4Portal" />
+											<property name="backUp" value="true" />
+										</bean>
+									</list>
+								</property>
+							</bean>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<!--
+	<bean id="deeSectionSelector" class="com.seeyon.apps.dee.section.DeeSectionSelector">
+        <property name="sectionType" value="forum" />
+        <property name="linkCategoryManager" ref="linkCategoryManager"></property>
+        <property name="linkSectionManager" ref="linkSectionManager"></property>
+        <property name="sortId" value="9"></property>
+    </bean>
+	<bean id="NCPendingSection" class="com.seeyon.apps.nc.section.NCPendingSection"  init-method="init">
+		<property name="ncUserMapperManager" ref="ncUserMapperManager" />
+		<property name="orgManager" ref="orgManager" />
+		<property name="sectionType" value="common" />
+        <property name="sortId" value="99" />
+        <property name="spaceTypes" value="personal,personal_custom,leader,outer,cooperation_work,objective_manage,edoc_manage,meeting_manage,performance_analysis,form_application" />
+        <property name="resourceBundle" value="com.seeyon.apps.nc.i18n.NCResources"/>
+		<property name="properties">
+			<list>
+				<bean class="com.seeyon.ctp.portal.section.SectionPropertyImpl">
+					<property name="reference">
+						<list>
+							<bean class="com.seeyon.ctp.portal.section.SectionReferenceImpl">
+								<property name="name" value="columnsName" />
+                                <property name="subject" value="cannel.name.label" />
+                                <property name="valueType" value="2" />
+                                <property name="defaultValue" value="nc.section.title" />
+							</bean>
+							<bean class="com.seeyon.ctp.portal.section.SectionReferenceImpl">
+								<property name="name" value="countNum"/>
+								<property name="subject" value="cannel.data.count"/>
+								<property name="valueType" value="2"/>
+								<property name="validate" value="isInteger"/>
+								<property name="validateValue" value="max=50 min=8"/>
+								<property name="defaultValue" value="8" />
+							</bean>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean name="ncOrgSyncTask" class="com.seeyon.apps.nc.scheduletask.NCOrgSyncTask"/>
+	-->
+</beans>

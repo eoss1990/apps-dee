@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ctpConfig>
+	<dee>
+		<enable mark="{boolean} {VE}" desc="是否启用DEE插件。true：表示启用；false：表示不启用；默认：false">false</enable>
+	</dee>
+</ctpConfig>

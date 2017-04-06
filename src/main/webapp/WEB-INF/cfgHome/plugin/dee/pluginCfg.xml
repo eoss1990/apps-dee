@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<id>dee</id>
+	<name>数据交换引擎</name>
+	<category>10660</category>
+	<initializer>com.seeyon.apps.dee.DEEPluginDefintion</initializer>
+</plugin>

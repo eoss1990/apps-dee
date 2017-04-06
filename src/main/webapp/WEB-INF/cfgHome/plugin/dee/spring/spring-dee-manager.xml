@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+    <bean id="deeDataSourceManager" class="com.seeyon.apps.dee.manager.DeeDataSourceManagerImpl"/>
+    <bean id="deeSynchronLogManager" class="com.seeyon.apps.dee.manager.DeeSynchronLogManagerImpl"/>
+    <bean id="deeScheduleManager" class="com.seeyon.apps.dee.manager.DeeScheduleManagerImpl"/>
+    <bean id="deeSectionManager" class="com.seeyon.apps.dee.manager.DeeSectionManagerImpl" init-method="init"/>
+    <bean id="deeSectionSelector" class="com.seeyon.apps.dee.section.DeeSectionSelector">
+        <property name="sectionType" value="forum"/>
+        <property name="linkCategoryManager" ref="linkCategoryManager"/>
+        <property name="linkSectionManager" ref="linkSectionManager"/>
+        <property name="deeSectionManager" ref="deeSectionManager"/>
+    </bean>
+    <bean id="deeDeleteManager" class="com.seeyon.apps.dee.manager.DeeDeleteManagerImpl"/>
+
+    <bean id="deeDesignManager" class="com.seeyon.apps.dee.manager.DeeDesignManagerImpl"/>
+    <bean id="deeDataManager" class="com.seeyon.apps.dee.manager.DeeDataManagerImpl"/>
+    <bean id="deeTriggerTaskManager" class="com.seeyon.apps.dee.manager.DEETriggerTaskManager"/>
+    <bean id="deeTriggerActionManager" class="com.seeyon.apps.dee.manager.DEETriggerActionManager"/>
+    <bean id="deeTriggerActionDesign" class="com.seeyon.apps.dee.manager.DEETriggerActionDesign"/>
+    <bean id="deeTriggerDesignManager" class="com.seeyon.apps.dee.manager.DeeTriggerDesignManagerImpl"/>
+    <bean id="formDownloadDee" class="com.seeyon.apps.dee.manager.FormDownloadDeeImpl"/>
+
+    <!-- 开发高级权限节点事件操作绑定 -->
+    <!-- 放到表单中 -->
+    <bean id="collaborationFormBindEventListener" class="com.seeyon.apps.dee.event.CollaborationFormBindEventListenerImpl"  /> 
+</beans>

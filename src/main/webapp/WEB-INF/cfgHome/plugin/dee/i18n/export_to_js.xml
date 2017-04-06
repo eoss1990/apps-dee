@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+    <resKey>dee.dee.exchange.list</resKey>
+    <resKey>dee.data.select</resKey>
+    <resKey>dee.data.fulling</resKey>
+    <resKey>dee.form.excute.fail</resKey>
+    <resKey>dee.button.cancel</resKey>
+    <resKey>dee.button.ok</resKey>
+    <resKey>dee.Development.Audit.Results</resKey>
+	<resKey>dee.Development.Transfer.audit.opinion</resKey> 
+	<resKey>dee.Development.fail.info</resKey> 
+	<resKey>dee.Development.button.close</resKey> 
+	<resKey>dee.Development.info</resKey> 
+	<resKey>dee.data.submit.error</resKey> 
+</export>

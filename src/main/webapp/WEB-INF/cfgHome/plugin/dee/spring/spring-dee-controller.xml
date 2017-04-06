@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean name="/deeDataSourceController.do" class="com.seeyon.apps.dee.controller.DeeDataSourceController">
+		<property name="deeDataSourceManager" ref="deeDataSourceManager" />
+	</bean>
+	<bean name="/deeSynchronLogController.do" class="com.seeyon.apps.dee.controller.DeeSynchronLogController"/>
+	<bean name="/deeScheduleController.do" class="com.seeyon.apps.dee.controller.DeeScheduleController"/>
+	<bean name="/deeSectionController.do" class="com.seeyon.apps.dee.controller.DeeSectionController"/>
+	<bean name="/deeDeployDRPController.do" class="com.seeyon.apps.dee.controller.DEEDeployDRPController"/>
+	<bean name="/deeDeleteController.do" class="com.seeyon.apps.dee.controller.DeeDeleteController"/>
+
+    <bean name="/dee/deeDesign.do" class="com.seeyon.apps.dee.controller.DeeDesignController"/>
+    <!--DEE前台调用展现控制器-->
+	<!-- 放到表单中 -->
+    <!--<bean name="/dee/deeDataDesign.do" class="com.seeyon.apps.dee.controller.DeeDataController"/>-->
+    <!--DEE前台调用触发控制器-->
+    <bean name="/dee/deeTrigger.do" class="com.seeyon.apps.dee.controller.DEETriggerDesignController">
+        <property name="deeTriggerDesignManager" ref="deeTriggerDesignManager"/>
+    </bean>
+</beans>
+<!-- -->
